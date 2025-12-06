@@ -6,13 +6,16 @@
 
 :root {
     --color-primary: #1a1a1a;
-    --color-secondary: #4a5568;
-    --color-accent: #718096;
+    --color-secondary: #3b82f6;
+    --color-accent: #60a5fa;
     --color-text: #2d3748;
-    --color-text-light: #718096;
+    --color-text-light: #64748b;
     --color-bg: #ffffff;
     --color-white: #ffffff;
     --color-black: #000000;
+    --color-blue-light: #dbeafe;
+    --color-blue-medium: #3b82f6;
+    --color-blue-dark: #1e40af;
     --font-serif: 'Cormorant Garamond', serif;
     --font-sans: 'Inter', sans-serif;
 }
@@ -97,11 +100,11 @@ body {
 }
 
 .split-left {
-    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
 }
 
 .split-right {
-    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
 }
 
 .split-content {
@@ -113,7 +116,7 @@ body {
 }
 
 .split-left .split-content {
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .split-right .split-content {
@@ -128,7 +131,7 @@ body {
     color: var(--color-text-light);
     text-transform: uppercase;
     letter-spacing: 3px;
-    margin-bottom: auto;
+    margin-top: 1.5rem;
 }
 
 .overlay-text-main {
@@ -297,17 +300,32 @@ body {
     align-items: flex-start;
 }
 
+.book-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
 .book-link {
     color: var(--color-primary);
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 500;
     transition: color 0.3s ease;
-    margin-top: 0.25rem;
+    display: inline-block;
 }
 
 .book-link:hover {
-    color: var(--color-secondary);
+    color: var(--color-blue-medium);
+}
+
+.book-link-whatsapp {
+    color: #25D366;
+}
+
+.book-link-whatsapp:hover {
+    color: #128C7E;
 }
 
 /* Achievements Section */
@@ -564,6 +582,148 @@ body {
     max-width: 280px;
 }
 
+/* Social Section */
+.social-section {
+    padding: 8rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.social-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.social-text {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin: 2rem 0 3rem;
+    font-weight: 300;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--color-primary);
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: var(--color-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    min-width: 120px;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+    border-color: var(--color-blue-medium);
+}
+
+.social-icon {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-blue-medium);
+    transition: color 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    color: var(--color-blue-dark);
+}
+
+.social-link span:not(.social-icon) {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    padding: 8rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-text {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin: 2rem 0 3rem;
+    font-weight: 300;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.newsletter-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: var(--color-white);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: var(--color-blue-medium);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.newsletter-button {
+    padding: 1rem 2.5rem;
+    background: var(--color-blue-medium);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.newsletter-button:hover {
+    background: var(--color-blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.newsletter-button:active {
+    transform: translateY(0);
+}
+
 /* Contact Section */
 .contact-section {
     padding: 8rem 0;
@@ -593,7 +753,7 @@ body {
 }
 
 .contact-link:hover {
-    color: var(--color-secondary);
+    color: var(--color-blue-medium);
 }
 
 /* Footer */
@@ -680,8 +840,32 @@ body {
     .achievements-section,
     .poems-section,
     .about-section,
+    .social-section,
+    .newsletter-section,
     .contact-section {
         padding: 4rem 0;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+
+    .social-link {
+        min-width: 100px;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .newsletter-input {
+        min-width: 100%;
+    }
+
+    .newsletter-button {
+        width: 100%;
     }
 
     .books-grid {
