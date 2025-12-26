@@ -241,7 +241,6 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     padding: 2.5rem;
-    background: var(--color-white);
     border-radius: 12px;
     border: 1px solid rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -261,14 +260,14 @@ body {
     margin: 0 auto;
     overflow: hidden;
     border-radius: 6px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #f5f5f5;
+    
 }
 
 .book-cover:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+   
 }
 
 .book-cover-img {
